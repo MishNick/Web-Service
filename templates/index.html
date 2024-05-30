@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clincy.inc</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Стили для шапки */
+        header {
+            background-image: linear-gradient(to right, #007bff, #00b8d4);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Стили для бокового меню */
+        .wrapper {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+
+        .sidebar {
+            background-color: #f0f0f0;
+            width: 200px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Стили для контента */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .buttons a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-image: linear-gradient(to right, #007bff, #00b8d4);
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-position 0.3s;
+            background-size: 200% auto;
+        }
+
+        .buttons a:hover {
+            background-position: right center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Clincy.inc</div>
+    </header>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <a href="/">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#" onclick="history.back()">Go Back</a>
+        </div>
+
+        <div class="content">
+            <div class="buttons">
+                <a href="/upload">Загрузить файл</a>
+                <a href="/files">Просмотреть файлы</a>
+            </div>
+            <!-- Your page content goes here -->
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
